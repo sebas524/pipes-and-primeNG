@@ -1,0 +1,23 @@
+<div>
+  <h1>decimal Pipe and percentage</h1>
+  <p>included pipes in angular, usually located in common module!</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="Net Sales" subheader="current year"
+      ><i class="pi pi-dollar"></i> {{ netSales | number : "1.2-2" }}</p-card
+    >
+  </div>
+  <div class="col-4">
+    <p-card header="brute Sales" subheader="current year">{{
+      netSales + 200000 | currency
+    }}</p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="percentage " subheader="current year">{{
+      percentage | percent
+    }}</p-card>
+  </div>
+</div>
