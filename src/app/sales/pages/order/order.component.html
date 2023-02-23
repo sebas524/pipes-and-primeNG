@@ -1,5 +1,5 @@
 <div>
-  <h1>personalized pipes</h1>
+  <h1>{{ "personalized pipes" | titlecase }}</h1>
   <p>turn {{ "this" | myCapitalizedPipe : toggle }} into caps</p>
 </div>
 
@@ -8,30 +8,33 @@
 
   <div class="p-toolbar-group-end">
     <button (click)="toggleHandler()" pButton class="p-2 mr-4 p-button-success">
-      toggle caps
+      {{ "toggle caps" | titlecase }}
     </button>
 
     <button
       pButton
       icon="pi pi-sort"
-      label="order by name"
       class="p-2 mr-4 p-button-danger"
       (click)="changeOrder('name')"
-    ></button>
+    >
+      {{ "order by name" | titlecase }}
+    </button>
     <button
       pButton
       icon="pi pi-sort"
-      label="order by fly capability"
       class="p-2 mr-4"
       (click)="changeOrder('flies')"
-    ></button>
+    >
+      {{ "order by flying ability" | titlecase }}
+    </button>
     <button
       pButton
       icon="pi pi-sort"
-      label="order by color"
       class="p-2 mr-4 p-button-help"
       (click)="changeOrder('color')"
-    ></button>
+    >
+      {{ "order by color" | titlecase }}
+    </button>
   </div>
 </p-toolbar>
 
